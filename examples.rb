@@ -1,21 +1,7 @@
-# def add_fruit(new_fruit)
-#   fruits = ['banana', 'apple', 'orange']
-#   fruits.push(new_fruit)
-#   p fruits
-# end
-#
-# add_fruit('avocado')
+birds = ["sparrow", "robin", "pigeon", "magpie", "penguin"]
 
-@customer =
-  {
-    name: "Ross",
-    pets: [],
-    cash: 1000
-  }
-
-def add_cash(add_amount)
-  @customer[:cash] += add_amount
-  p @customer
+def sort_A_to_Z(array)
+  p array.sort
 end
 
-add_cash(800)
+sort_A_to_Z(birds)
