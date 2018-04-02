@@ -66,7 +66,4 @@ describe('calculator', function () {
     assert.equal('0', calculator.runningTotal)
   })
 
-
-
-
 });
