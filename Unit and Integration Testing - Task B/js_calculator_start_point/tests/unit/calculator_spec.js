@@ -11,6 +11,16 @@ describe('calculator', function () {
     assert.equal(true, true)
   });
 
+  it('calculator displays result of specific number click', function(){
+    calculator.numberClick(1);
+    assert.equal(1, calculator.runningTotal);
+  });
+
+  it('calculator displays result of specific operator click', function () {
+    calculator.operatorClick('*');
+    assert.equal('*', calculator.previousOperator);
+  });
+
   it('calculator can add numbers, display result', function(){
     calculator.numberClick(1);
     calculator.operatorClick('+');
@@ -32,7 +42,7 @@ describe('calculator', function () {
     calculator.operatorClick('*');
     calculator.numberClick(5);
     calculator.operatorClick('=');
-    assert.equal(15, calculator.runningTotal)
+    assert.equal(15, calculator.runningTotal);
   });
 
   it('calculator can divide numbers, display result', function () {
@@ -40,13 +50,14 @@ describe('calculator', function () {
     calculator.operatorClick('/');
     calculator.numberClick(7);
     calculator.operatorClick('=');
-    assert.equal(3, calculator.runningTotal)
+    assert.equal(3, calculator.runningTotal);
   });
 
   it('displays concatonated number upon multiple clicks', function(){
     calculator.numberClick(5);
     calculator.numberClick(5);
-    assert.equal(55, calculator.runningTotal)
+    calculator.numberClick(8);
+    assert.equal(558, calculator.runningTotal);
   });
 
   it('multiple operators', function () {
@@ -56,14 +67,14 @@ describe('calculator', function () {
     calculator.operatorClick('*');
     calculator.numberClick(2);
     calculator.operatorClick('=');
-    assert.equal('16', calculator.runningTotal)
+    assert.equal('16', calculator.runningTotal);
   });
 
   it('clr button clears display when clicked', function(){
     calculator.numberClick(4);
     calculator.operatorClick('*');
-    calculator.clearClick()
-    assert.equal('0', calculator.runningTotal)
-  })
+    calculator.clearClick();
+    assert.equal('0', calculator.runningTotal);
+  });
 
 });
