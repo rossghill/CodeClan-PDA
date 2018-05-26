@@ -21,7 +21,7 @@ Calculator.prototype = {
 
   divide: function(number){
     if (number === 0) {
-      this.runningTotal = 0;
+      this.runningTotal = 'Sorry, you cannot divide by zero';
     } else {
       this.runningTotal = parseFloat(this.previousTotal) / parseFloat(number);
     }  

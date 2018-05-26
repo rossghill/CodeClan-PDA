@@ -56,7 +56,3 @@ What does the code do in exceptional circumstances?
   - If you divide by zero, what is the effect?
   - Can you write a test to describe what you'd prefer to happen, and then correct the code to make that test pass.
 
-
-
-
-
